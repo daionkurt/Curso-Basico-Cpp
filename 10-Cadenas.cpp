@@ -1,12 +1,17 @@
 //
-// Created by carlo on 31/05/2016.
+// Created by Carlos Andrés Fernández Jalomo on 31/05/2016.
+// correo: carlosfdez@outlook.com
 //
 #include <iostream>
 #include <string>
 #include <cstring>
-#include <sstream>
+#include <sstream>      //Cabecera que incluye las operaciones sobre los flujos de iostream almacenandolos en objetos
 
-/*Esto es el uso de cadenas de forma tradicional en C, en la que se hace uso de un arreglo de caracteres consecutivos
+/*Cadenas de forma tradicional (Uso de C)
+ * ****************************************************************************************************
+ * En C++ existen 2 formas de declarar y usar cadenas, la versión tradicional de C, que ya está depreciada en C++11 y
+ * posteriores
+ * Esto es el uso de cadenas de forma tradicional en C, en la que se hace uso de un arreglo de caracteres consecutivos
  * para dar la forma de una cadena de texto*/
 void cadenasTradicionales(){
     char nombre[7] = {'C','a','r','l','o','s','\0'}; //se declara igual que un arreglo, NOTA: siempre al final se debe

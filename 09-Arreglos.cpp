@@ -1,25 +1,50 @@
 //
-// Created by carlo on 31/05/2016.
+// Created by Carlos Andrés Fernández Jalomo on 31/05/2016.
+// correo: carlosfdez@outlook.com
 //
 #include <iostream>
-#include <iomanip>
+#include <iomanip>      //Cabecera que contiene manipuladores de salida e impresión
 #include <ctime>
 
 using namespace std;
 using std::setw;
 
-/*Los arreglos son colecciones de objetos de un determinado tipo, en este caso se puede mostrar
- * las distintas formas de inicializar un arreglo de enteros*/
+/*Arreglos
+ * ****************************************************************************************************
+ * Los arreglos son colecciones de objetos de un determinado tipo, agrupados para formar una sola entidad
+ * es decir, es como si tuvieramos muchos objetos bajo un solo identificador, pero esta indentificador
+ * tuviera casillas, y cada objeto se guardara en 1 casillas. Ejemplo, tenemos un espacio que queremos llenar
+ * con cajas, podríamos definir caja por caja de manera individual:
+ *   +-------+   +-------+    +-------+    +-------+
+ *   |   a   |   |   b   |    |   c   |    |   d   |
+ *   +-------+   +-------+    +-------+    +-------+
+ *   Pero tendriamos variables llamadas: caja1, caja2, caja3, caja4, y esto puede volverse tedioso e imposible
+ *   en estos casos, mejor usamos arreglos que una elementos de un mismo tipo. Creamos un arreglo que se llame
+ *   "Cajas" y entonces lo ponemos de tamaño 4, y en lugar de caja1, caja2, etc... tendríamos un mismo
+ *   identificador "Cajas" pero con indices (se usan [] para indicar índices y siempre comienza en el indice 0)
+ *   , como cajas[0], cajas[1], cajas[2]:
+ *   +-------+-------+-------+-------+
+ *   |   a   |   b   |   c   |   d   |
+ *   +-------+-------+-------+-------+
+ *      [0]     [1]     [2]     [3]
+ *    En los arreglos, si declaramos el arreglo de 4, sus posiciones iran del 0 al 3, siempre el inicio es el 0
+ *    y la posición maxima, es  N-1, en caso de usar un índice fuera de esto, podrían causar errores
+ * ****************************************************************************************************
+ * Formas de inicializar arreglos*/
 void arreglosSimples(){
-    //int enteros[10]; //se declara el tamaño pero no se inicializa con algun valor establecido
-    //int enteros[10] = {1,2,3,4,5,6,7,8,9,10}; //se declara con el tamaño y aparte usando una lista de inicialización se dan valores a las posiciones
-    int enteros[] = {1,2,3,4,5,6,7,8,9,10}; //no se declara el tamaño pero se infiere por la cantidad de elementos de la lista de inicialización
+    //int enteros[10];                          //se declara el tamaño pero no se inicializa con algun valor establecido
+    //int enteros[10] = {1,2,3,4,5,6,7,8,9,10}; //se declara con el tamaño y aparte usando una lista de inicialización
+                                                // se dan valores a las posiciones
+    int enteros[] = {1,2,3,4,5,6,7,8,9,10};     //no se declara el tamaño pero se infiere por la cantidad de elementos
+                                                // de la lista de inicialización
     cout<<"Element"<<setw(13)<<"Value"<<endl;
+    /*Podemos usar iterativas para recorrer los arreglos, ya que sus posiciones son contiguas
+     * Recoremos que siempre debemos ir dese 0 que es la posición inicial, hasta N-1 o en los bucles
+     * mientras que i sea menor al tamaño del arreglo*/
     for(int i=0;i<10;i++){
-        cout<<setw(7)<<i<<setw(13)<<enteros[i]<<endl;
+        cout<<setw(7)<<i<<setw(13)<<enteros[i]<<endl;   //setw(N) sirve para formatear al salida dandole espaciado
     }
 }
-
 /*Tambien se puedne declarar arreglos de dos dimensiones, en este caso alto y ancho*/
 void arreglosMultidimensionales(){
     int enteros[3][4] = {
@@ -27,7 +52,8 @@ void arreglosMultidimensionales(){
         {4,5,6,7},
         {8,9,10,11}
     }; //esta es una forma visualmente más entendible de inicializar una matriz de 3x4
-    //int entero[3][4] = {0,1,2,3,4,5,6,7,8,9,10,11}; //tambien se podría ser así, y obtiene la posición automáticamente según el tamaño designado
+    //int entero[3][4] = {0,1,2,3,4,5,6,7,8,9,10,11};   //tambien se podría ser así, y obtiene la posición
+                                                        // automáticamente según el tamaño designado
     cout<<enteros[2][3]<<endl;
     for(int i=0;i<3;i++) {
         for (int j=0;j<4;j++) {
@@ -65,7 +91,7 @@ int* getRandom(){
 
 void retornarArreglos(){
     int* puntero;
-    puntero = getRandom();
+    puntero = getRandom();      //El arreglo puntero es obtenido de la función de getRandom()
     for(int i=0;i<10;i++){
         cout<<"*(puntero+"<<i<<"): "<<*(puntero+i)<<endl;
     }

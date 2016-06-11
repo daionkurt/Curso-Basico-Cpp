@@ -1,5 +1,6 @@
 //
-// Created by carlo on 31/05/2016.
+// Created by Carlos Andrés Fernández Jalomo on 31/05/2016.
+// correo: carlosfdez@outlook.com
 //
 #include <iostream>
 #include <ctime>
