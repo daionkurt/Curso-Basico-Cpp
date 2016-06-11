@@ -3,9 +3,9 @@
 int variableExterna=6;
 
 int main(){
-//    muestraTiposDatos();
+    muestraTiposDatos();
 //    muestraConstantesModificadores()
-    muestraOperadores();
+//    muestraOperadores();
 //    muestraClasesAlmacenamiento();
 //    muestraSelectivas();
 //    muestraIterativas();

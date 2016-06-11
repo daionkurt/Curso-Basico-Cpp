@@ -5,9 +5,9 @@
 #ifndef CURSO_C_INCLUDES_HPP
 #define CURSO_C_INCLUDES_HPP
 
-//#include "01-TiposDeDatos.cpp"
+#include "01-TiposDeDatos.cpp"
 //#include "02-ConstantesYModificadores.cpp"
-#include "03-Operadores.cpp"
+//#include "03-Operadores.cpp"
 //#include "04-ClasesDeAlmacenamiento.cpp"
 //#include "05-Selectivas.cpp"
 //#include "06-Iterativas.cpp"
