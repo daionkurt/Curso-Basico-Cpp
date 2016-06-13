@@ -66,7 +66,7 @@ Para cubrir los anteriores requisitos se recomienda por parte del autor las sigu
 
 ##Ejemplos de presentación
 Los archivos vendrán explicados de la siguiente manera
-```
+```C++
 /*Descripción teórica del ejemplo a ver
 * Sintaxis
 * Notas de aclaración 
@@ -80,7 +80,7 @@ Hay 2 archivos que tienes que cuidar bien cuando quieras compilar y ejecutar el 
 * main.cpp
 * Includes.hpp
 Esto por que "Includes.hpp" contiene el enlace #include a todos los archivos de manera simultanea, pero están comentados, cuando requieras ejecutar un archivo de ejemplo en particular se te sugiere descomentar el tema en "Includes.hpp":
-```
+```C++
 #ifndef CURSO_C_INCLUDES_HPP
 #define CURSO_C_INCLUDES_HPP
 
@@ -91,7 +91,7 @@ Esto por que "Includes.hpp" contiene el enlace #include a todos los archivos de 
 //#include "05-Selectivas.cpp"
 ```
 Y de igual manera en "main.cpp":
-```
+```C++
 int main(){
 //    muestraTiposDatos();
 //    muestraConstantesModificadores()
@@ -99,7 +99,7 @@ int main(){
 //    muestraClasesAlmacenamiento();
 ```
 Y una vez hecho estoy quieres usar otro, comentar el anterior y descomentar el nuevo, pero se sugiere siempre tener unicamente 1 descomentado:
-```
+```cpp
 #ifndef CURSO_C_INCLUDES_HPP
 #define CURSO_C_INCLUDES_HPP
 
